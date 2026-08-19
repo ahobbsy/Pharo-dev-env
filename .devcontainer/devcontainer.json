@@ -1,0 +1,17 @@
+{
+  "name": "Pharo Live GUI Desktop",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "badetitou.pharo"
+      ]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup-pharo.sh"
+}
