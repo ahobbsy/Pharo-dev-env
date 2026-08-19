@@ -1,1 +1,58 @@
+Here are your files: 
+These configuration files will automate the setup of a fully functional Linux virtual desktop inside your GitHub cloud environment so you can run the standard Pharo visual interface completely in your web browser.
+------------------------------
+## Step-by-Step Setup Guide (100% in Browser)
+Follow these steps on any laptop to launch your isolated, cloud-hosted Pharo GUI.
+## 1. Create a New GitHub Repository
+
+   1. Open your web browser and go to your GitHub account.
+   2. Create a brand-new Public or Private repository (e.g., my-pharo-cloud-project).
+   3. Check the box to add a README.md file so the repository is not empty.
+
+## 2. Upload the Configuration Files
+
+   1. Inside your new repository, click Add file > Create new file.
+   2. Type .devcontainer/devcontainer.json in the name field.
+   3. Paste the contents of the generated devcontainer.json file into it and commit the changes.
+   4. Create another new file named .devcontainer/setup-pharo.sh.
+   5. Paste the contents of the generated setup-pharo.sh script into it and commit the changes. [1] 
+
+## 3. Launch the Cloud Codespace
+
+   1. Navigate back to the main page of your repository.
+   2. Click the green Code button near the top right.
+   3. Switch to the Codespaces tab and click Create codespace on main.
+   4. A new browser tab will open, initializing your VS Code cloud server. This first launch will take 2–3 minutes because GitHub is building the virtual desktop layer and downloading the Pharo engine. [2] 
+
+## 4. Connect to the Visual Desktop [3] 
+
+   1. Once the environment loads, look at the bottom-right corner of your browser window. You will see a notification pop up stating that Port 6080 has been forwarded.
+   2. Go to the Ports tab in the bottom panel (next to the Terminal tab).
+   3. Look for Port 6080 (noVNC), hover over the local address, and click the Open in Browser globe icon.
+   4. A new browser tab will open displaying a Linux desktop. Click the Connect button. [4, 5, 6] 
+
+## 5. Launch the Pharo GUI
+
+   1. In your original VS Code browser tab, go to the integrated Terminal at the bottom.
+   2. Run this command to launch Pharo inside your streaming desktop:
+   
+   ./pharo-ui Pharo.image &
+   
+   3. Switch back to your noVNC web desktop tab. You will see the native, fully interactive Pharo environment floating on your screen.
+
+------------------------------
+## How to Save Your Work Safely
+Because GitHub Codespaces are temporary virtual machines, your image changes will reset if the container is deleted. To keep your work permanently: [7] 
+
+* Use Git & Tonel: Always export your Smalltalk packages to the repository directory using the Tonel file format through Pharo's Iceberg git manager, then push your commits back to GitHub.
+
+Would you like me to show you how to configure Pharo's Iceberg tool inside this visual desktop to cleanly sync your code with GitHub?
+
+[1] [https://www.cs.cornell.edu](https://www.cs.cornell.edu/courses/cs3410/2025sp/course/infra.html)
+[2] [https://doc.cocalc.com](https://doc.cocalc.com/vscode.html)
+[3] [https://devblogs.microsoft.com](https://devblogs.microsoft.com/visualstudio/azure-virtual-machine-images-for-visual-studio/)
+[4] [https://www.infoworld.com](https://www.infoworld.com/article/2338590/intro-to-gitpod-a-cloud-development-environment.html)
+[5] [https://github.com](https://github.com/devcontainers/features/blob/main/src/desktop-lite/README.md)
+[6] [https://uwplatt.teamdynamix.com](https://uwplatt.teamdynamix.com/TDClient/111/Portal/KB/Article/15812/Virtual-Desktop-Connect-to-Azure-Virtual-Desktops)
+[7] [https://www.devclass.com](https://www.devclass.com/development/2022/05/24/microsoft-reveals-dev-box-workstations-for-remote-development/1631835)
 
