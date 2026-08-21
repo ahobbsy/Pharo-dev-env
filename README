@@ -35,8 +35,12 @@ Follow these steps on any laptop to launch your isolated, cloud-hosted Pharo GUI
 
    1. In your original VS Code browser tab, go to the integrated Terminal at the bottom.
    2. Run this command to launch Pharo inside your streaming desktop:
+
+
    
    ./pharo-ui Pharo.image &
+
+   # use wget -qO- https://get.pharo.org/64/ | bash and run above command in noVNC to get pharo up
    
    3. Switch back to your noVNC web desktop tab. You will see the native, fully interactive Pharo environment floating on your screen.
 
