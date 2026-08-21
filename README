@@ -40,7 +40,7 @@ Follow these steps on any laptop to launch your isolated, cloud-hosted Pharo GUI
    
    ./pharo-ui Pharo.image &
 
-   # use wget -qO- https://get.pharo.org/64/ | bash and run above command in noVNC to get pharo up
+   # use wget -qO- https://get.pharo.org/64/150 | bash and run above command in noVNC to get pharo up
    
    3. Switch back to your noVNC web desktop tab. You will see the native, fully interactive Pharo environment floating on your screen.
 
